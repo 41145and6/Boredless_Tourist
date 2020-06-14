@@ -24,11 +24,22 @@ def add_attraction(destination, attraction):
     destination_index = get_destination_index(destination)
   except ValueError:
     print("That's not on our list!")
-    return  
-  attractions_for_destination = [attractions[destination_index]]
-  attractions.append(attractions_for_destination)
-  return attractions
+    return
+  attractions_for_destination = attractions[destination_index]
+  attractions_for_destination.append(attraction)
+  return
+    
 
-add_attraction('Los Angeles' , ['Venice Beach' , 'beach'])
+add_attraction('Los Angeles, USA' , ['Venice Beach' , ['beach']])
+add_attraction("Paris, France", ["the Louvre", ["art", "museum"]])
+add_attraction("Paris, France", ["Arc de Triomphe", ["historical site", "monument"]])
+add_attraction("Shanghai, China", ["Yu Garden", ["garden", "historcical site"]])
+add_attraction("Shanghai, China", ["Yuz Museum", ["art", "museum"]])
+add_attraction("Shanghai, China", ["Oriental Pearl Tower", ["skyscraper", "viewing deck"]])
+add_attraction("Los Angeles, USA", ["LACMA", ["art", "museum"]])
+add_attraction("São Paulo, Brazil", ["São Paulo Zoo", ["zoo"]])
+add_attraction("São Paulo, Brazil", ["Pátio do Colégio", ["historical site"]])
+add_attraction("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical site"]])
+add_attraction("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
 
-print(attractions)
+#print(attractions)
